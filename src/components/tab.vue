@@ -1,5 +1,5 @@
 <template>
-  <div class="swiper-slide">
+  <div class="tab">
     <slot></slot>
   </div>
 </template>
@@ -10,7 +10,7 @@ export default {
 };
 </script>
 <style scoped>
-.swiper-slide {
+.tab {
   flex-shrink: 0;
   width: 100%;
   height: 100%;
