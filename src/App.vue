@@ -2,16 +2,16 @@
   <div class="demo full">
     <h2>基础用法</h2>
     <tabs>
-      <tab tab-title="全部">
+      <tab title="全部">
         <p class="content">这里是页签全部内容</p>
       </tab>
-      <tab tab-title="待付款">
+      <tab title="待付款">
         <p class="content">这里是页签待付款内容</p>
       </tab>
-      <tab tab-title="待收货">
+      <tab title="待收货">
         <p class="content">这里是页签待收货内容</p>
       </tab>
-      <tab tab-title="已完成">
+      <tab title="已完成">
         <p class="content">这里是页签已完成内容</p>
       </tab>
     </tabs>
@@ -19,16 +19,16 @@
     <h2>defaultIndex设置默认显示tab</h2>
     <h2>switchTab监听切换tab返回事件</h2>
     <tabs :default-index="1" @switch-tab="switchTab">
-      <tab tab-title="全部"
+      <tab title="全部"
       ><p class="content">这里是页签全部内容</p></tab
       >
-      <tab tab-title="待付款"
+      <tab title="待付款"
       ><p class="content">这里是页签待付款内容</p></tab
       >
-      <tab tab-title="待收货"
+      <tab title="待收货"
       ><p class="content">这里是页签待收货内容</p></tab
       >
-      <tab tab-title="已完成"
+      <tab title="已完成"
       ><p class="content">这里是页签已完成内容</p></tab
       >
     </tabs>
@@ -38,22 +38,22 @@
       个时，标签栏可以在水平方向上滚动，切换时会自动将当前标签居中。</h2
     >
     <tabs>
-      <tab tab-title="全部"
+      <tab title="全部"
       ><p class="content">这里是页签全部内容</p></tab
       >
-      <tab tab-title="待付款"
+      <tab title="待付款"
       ><p class="content">这里是页签待付款内容</p></tab
       >
-      <tab tab-title="待收货"
+      <tab title="待收货"
       ><p class="content">这里是页签待收货内容</p></tab
       >
-      <tab tab-title="已完成"
+      <tab title="已完成"
       ><p class="content">这里是页签已完成内容</p></tab
       >
-      <tab tab-title="已取消"
+      <tab title="已取消"
       ><p class="content">这里是页签已取消内容</p></tab
       >
-      <tab tab-title="待评价"
+      <tab title="待评价"
       ><p class="content">这里是页签待评价内容</p></tab
       >
     </tabs>
@@ -61,7 +61,7 @@
     <h2>异步操作</h2>
     <tabs v-if="editList.length > 0">
       <tab
-          :tab-title="item.title"
+          :title="item.title"
           v-for="(item, index) in editList"
           :key="index"
       >

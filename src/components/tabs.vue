@@ -2,11 +2,11 @@
   <view class="tabs">
     <view class="tabs__title" ref="navlist">
       <view
-          :class="['tabs__title-item', { 'tabs__title-item--active': activeIndex == index }]"
-          v-for="(item, index) in titles"
-          :key="index"
-          ref="titleItem"
-          @click="switchTitle(index, $event)"
+        :class="['tabs__title-item', { 'tabs__title-item--active': activeIndex == index }]"
+        v-for="(item, index) in titles"
+        :key="index"
+        ref="titleItem"
+        @click="switchTitle(index)"
       >
         {{ item.title }}
       </view>
@@ -68,9 +68,9 @@ export default {
         const slots: VNode[] = ctx.slots.default().length === 1
               ? (ctx.slots.default()[0].children as VNode[])
               : ctx.slots.default();
-        slots && slots.map((item) => {
+        slots && slots.forEach((item) => {
           titles.push({
-            title: item.props && item.props['tab-title'] ? item.props['tab-title'] : ''
+            title: item.props && item.props['title'] ? item.props['title'] : ''
           });
         });
       }
