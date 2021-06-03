@@ -18,7 +18,7 @@
 
     <h2>defaultIndex设置默认显示tab</h2>
     <h2>switchTab监听切换tab返回事件</h2>
-    <tabs :default-index="1" @switch-tab="switchTab">
+    <tabs :default-index="1" @clickItem="switchTab">
       <tab title="全部"
       ><p class="content">这里是页签全部内容</p></tab
       >
@@ -58,7 +58,7 @@
       >
     </tabs>
 
-    <h2>异步操作</h2>
+<!--    <h2>异步操作</h2>
     <tabs v-if="editList.length > 0">
       <tab
           :title="item.title"
@@ -68,7 +68,7 @@
         <p class="content">这里是页签{{ index }}内容</p>
       </tab>
     </tabs>
-    <button type="primary" @click="changeList">改变数据</button>
+    <button type="primary" @click="changeList">改变数据</button>-->
   </div>
 </template>
 

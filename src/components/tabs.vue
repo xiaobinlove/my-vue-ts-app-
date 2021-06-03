@@ -19,6 +19,18 @@
   </view>
 </template>
 <script lang="ts">
+/**
+ * tabs 标签
+ * @description 该组件，是一个tabs标签组件，在标签多的时候，可以配置为左右滑动，标签少的时候，可以禁止滑动。 该组件的一个特点是配置为滚动模式时，激活的tab会自动移动到组件的中间位置。
+ * @property {String Number} tabHeight 导航栏的高度，
+ * @property {String Number} font-size tab文字大小，
+ * @property {String} active-color 滑块和激活tab文字的颜色（默认#2979ff）
+ * @property {String} inactive-color tabs文字颜色（默认#303133）
+ * @property {String} bg-color tabs导航栏的背景颜色（默认#ffffff）
+ * @property {Boolean} defaultIndex 激活选项的字体是否加粗（默认true）
+ * @event {Function} clickItem 点击标签时触发
+ * @example <u-tabs ref="tabs" :items="items" :is-scroll="false"></u-tabs>
+ */
 import { reactive, ref, onMounted, watch, VNode } from 'vue';
 interface DataTitle {
   title?: string;
@@ -60,7 +72,7 @@ export default {
       translateX.value = index * tabDom.value.offsetWidth;
       // title点击后居中显示
       centerTitle(index);
-      ctx.emit('switchTab', index)
+      ctx.emit('clickItem', index)
     }
     function initTitle() {
       titles.length = 0;
